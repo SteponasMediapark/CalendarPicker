@@ -71,68 +71,68 @@ export default function DaysGridView(props) {
           if (days.length > 0) {
             const day = days.shift() + 1;
             return (
-              <Day
-                key={day}
-                day={day}
-                month={month}
-                year={year}
-                styles={styles}
-                onPressDay={onPressDay}
-                selectedStartDate={selectedStartDate}
-                selectedEndDate={selectedEndDate}
-                allowRangeSelection={allowRangeSelection}
-                minDate={minDate}
-                maxDate={maxDate}
-                disabledDates={disabledDates}
-                minRangeDuration={minRangeDuration}
-                maxRangeDuration={maxRangeDuration}
-                textStyle={textStyle}
-                todayTextStyle={todayTextStyle}
-                selectedDayStyle={selectedDayStyle}
-                selectedRangeStartStyle={selectedRangeStartStyle}
-                selectedRangeStyle={selectedRangeStyle}
-                selectedRangeEndStyle={selectedRangeEndStyle}
-                customDatesStyles={customDatesStyles}
-                enableDateChange={enableDateChange}
-              />
+                <Day
+                    key={day}
+                    day={day}
+                    month={month}
+                    year={year}
+                    styles={styles}
+                    onPressDay={onPressDay}
+                    selectedStartDate={selectedStartDate}
+                    selectedEndDate={selectedEndDate}
+                    allowRangeSelection={allowRangeSelection}
+                    minDate={minDate}
+                    maxDate={maxDate}
+                    disabledDates={disabledDates}
+                    minRangeDuration={minRangeDuration}
+                    maxRangeDuration={maxRangeDuration}
+                    textStyle={textStyle}
+                    todayTextStyle={todayTextStyle}
+                    selectedDayStyle={selectedDayStyle}
+                    selectedRangeStartStyle={selectedRangeStartStyle}
+                    selectedRangeStyle={selectedRangeStyle}
+                    selectedRangeEndStyle={selectedRangeEndStyle}
+                    customDatesStyles={customDatesStyles}
+                    enableDateChange={enableDateChange}
+                />
             );
           }
         } else {
           return (
-            <EmptyDay
-              key={uuid()}
-              styles={styles}
-            />
+              <EmptyDay
+                  key={uuid()}
+                  styles={styles}
+              />
           );
         }
       } else {
         if (days.length > 0) {
           const day = days.shift() + 1;
           return (
-            <Day
-              key={day}
-              day={day}
-              month={month}
-              year={year}
-              styles={styles}
-              onPressDay={onPressDay}
-              selectedStartDate={selectedStartDate}
-              selectedEndDate={selectedEndDate}
-              allowRangeSelection={allowRangeSelection}
-              minDate={minDate}
-              maxDate={maxDate}
-              disabledDates={disabledDates}
-              minRangeDuration={minRangeDuration}
-              maxRangeDuration={maxRangeDuration}
-              textStyle={textStyle}
-              todayTextStyle={todayTextStyle}
-              selectedDayStyle={selectedDayStyle}
-              selectedRangeStartStyle={selectedRangeStartStyle}
-              selectedRangeStyle={selectedRangeStyle}
-              selectedRangeEndStyle={selectedRangeEndStyle}
-              customDatesStyles={customDatesStyles}
-              enableDateChange={enableDateChange}
-            />
+              <Day
+                  key={day}
+                  day={day}
+                  month={month}
+                  year={year}
+                  styles={styles}
+                  onPressDay={onPressDay}
+                  selectedStartDate={selectedStartDate}
+                  selectedEndDate={selectedEndDate}
+                  allowRangeSelection={allowRangeSelection}
+                  minDate={minDate}
+                  maxDate={maxDate}
+                  disabledDates={disabledDates}
+                  minRangeDuration={minRangeDuration}
+                  maxRangeDuration={maxRangeDuration}
+                  textStyle={textStyle}
+                  todayTextStyle={todayTextStyle}
+                  selectedDayStyle={selectedDayStyle}
+                  selectedRangeStartStyle={selectedRangeStartStyle}
+                  selectedRangeStyle={selectedRangeStyle}
+                  selectedRangeEndStyle={selectedRangeEndStyle}
+                  customDatesStyles={customDatesStyles}
+                  enableDateChange={enableDateChange}
+              />
           );
         }
       }
@@ -140,14 +140,14 @@ export default function DaysGridView(props) {
   }
 
   return (
-    <View style={styles.daysWrapper}>
-      { weekArray.map(weekIndexOfMonth => (
-          <View key={weekIndexOfMonth} style={styles.weekRow}>
-            { generateDatesForWeek(weekIndexOfMonth) }
-          </View>
+      <View style={styles.daysWrapper}>
+        { weekArray.map(weekIndexOfMonth => (
+            <View key={weekIndexOfMonth} style={styles.weekRow}>
+              { generateDatesForWeek(weekIndexOfMonth) }
+            </View>
         ))
-      }
-    </View>
+        }
+      </View>
   );
 }
 
@@ -172,7 +172,7 @@ DaysGridView.propTypes = {
     style: ViewPropTypes.style,
     textStyle: Text.propTypes.style,
   })),
-  disabledDates: PropTypes.oneOfType([PropTypes.array, PropTypes.func]),
+  disabledDates: PropTypes.array,
   minRangeDuration: PropTypes.oneOfType([PropTypes.array, PropTypes.number]),
   maxRangeDuration: PropTypes.oneOfType([PropTypes.array, PropTypes.number]),
 }
