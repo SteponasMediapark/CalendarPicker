@@ -194,7 +194,7 @@ export default function Day(props) {
     }
 
     return (
-        <View style={[styles.dayWrapper, customContainerStyle, { marginTop: 5 }]}>
+        <View style={[styles.dayWrapper, customContainerStyle, styles.$dayWrapper]}>
           <TouchableOpacity
               disabled={!enableDateChange}
               style={[customDateStyle, daySelectedStyle, propSelectedDayStyle, { height: '100%' }]}

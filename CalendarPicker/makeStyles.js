@@ -187,16 +187,9 @@ export function makeStyles(scaler, backgroundColor, textColor, todayBackgroundCo
       justifyContent: 'center',
     },
 
-    $selectedDateInRange: {
-      ...styles.$selectedDateInRange,
-    },
-
-    $selectedDayLabel: {
-      ...styles.$selectedDayLabel,
-    },
-
-    $selectedDateStartEndSame: {
-      ...styles.$selectedDateStartEndSame,
-    },
+    $selectedDateInRange: styles.$selectedDateInRange,
+    $selectedDayLabel: styles.$selectedDayLabel,
+    $selectedDateStartEndSame: styles.$selectedDateStartEndSame,
+    $dayWrapper: styles.$dayWrapper,
   };
 }
