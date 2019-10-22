@@ -262,7 +262,9 @@ export default class CalendarPicker extends Component {
       maxRangeDuration,
       swipeConfig,
       customDatesStyles,
-      enableDateChange
+      enableDateChange,
+      controlsStylePrev,
+      controlsStyleNext,
     } = this.props;
 
     let disabledDatesTime = [];
@@ -327,6 +329,8 @@ export default class CalendarPicker extends Component {
                 previousTitle={previousTitle}
                 nextTitle={nextTitle}
                 textStyle={textStyle}
+                controlsStylePrev={controlsStylePrev}
+                controlsStyleNext={controlsStyleNext}
             />
             <Weekdays
                 styles={styles}
