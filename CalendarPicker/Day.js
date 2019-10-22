@@ -197,7 +197,7 @@ export default function Day(props) {
         <View style={[styles.dayWrapper, customContainerStyle, styles.$dayWrapper]}>
           <TouchableOpacity
               disabled={!enableDateChange}
-              style={[customDateStyle, daySelectedStyle, propSelectedDayStyle, { height: '100%' }]}
+              style={[customDateStyle, daySelectedStyle, propSelectedDayStyle, styles.$customDayStyle]}
               onPress={() => onPressDay(day)}
           >
             <Text style={[styles.dayLabel, textStyle, customTextStyle, selectedDayColorStyle]}>
@@ -209,7 +209,7 @@ export default function Day(props) {
   } else {
     // dateOutOfRange = true
     return (
-        <View style={styles.dayWrapper}>
+        <View style={[styles.dayWrapper, styles.$dayWrapper]}>
           <Text style={[textStyle, styles.disabledText]}>{day}</Text>
         </View>
     );

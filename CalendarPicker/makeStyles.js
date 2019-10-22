@@ -191,5 +191,6 @@ export function makeStyles(scaler, backgroundColor, textColor, todayBackgroundCo
     $selectedDayLabel: styles.$selectedDayLabel,
     $selectedDateStartEndSame: styles.$selectedDateStartEndSame,
     $dayWrapper: styles.$dayWrapper,
+    $customDayStyle: styles.$customDayStyle,
   };
 }
