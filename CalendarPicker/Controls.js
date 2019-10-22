@@ -5,7 +5,7 @@ import {
 } from 'react-native';
 import PropTypes from 'prop-types';
 
-export default function Controls({styles, textStyles, label, onPressControl}) {
+export default function Controls({styles, textStyles, label, onPressControl, containerStyle}) {
     let component;
     if (typeof label === 'function') {
         component = label();
@@ -14,7 +14,7 @@ export default function Controls({styles, textStyles, label, onPressControl}) {
     }
 
     return (
-        <TouchableOpacity onPress={() => onPressControl()}>
+        <TouchableOpacity onPress={() => onPressControl()} style={containerStyle}>
             {component}
         </TouchableOpacity>
     );

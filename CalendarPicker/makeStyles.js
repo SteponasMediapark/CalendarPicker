@@ -156,7 +156,6 @@ export function makeStyles(scaler, backgroundColor, textColor, todayBackgroundCo
       flex: 1,
       alignItems: 'flex-start',
       justifyContent: 'center',
-      borderWidth: 2,
     },
 
     next: {
@@ -164,7 +163,6 @@ export function makeStyles(scaler, backgroundColor, textColor, todayBackgroundCo
       flex: 1,
       alignItems: 'flex-end',
       justifyContent: 'center',
-      borderWidth: 2,
     },
 
     yearLabel: {
