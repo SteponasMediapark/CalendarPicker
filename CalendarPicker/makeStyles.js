@@ -155,14 +155,16 @@ export function makeStyles(scaler, backgroundColor, textColor, todayBackgroundCo
       textAlign: 'left',
       flex: 1,
       alignItems: 'flex-start',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      borderWidth: 2,
     },
 
     next: {
       textAlign: 'right',
       flex: 1,
       alignItems: 'flex-end',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      borderWidth: 2,
     },
 
     yearLabel: {
