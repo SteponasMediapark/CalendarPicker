@@ -1,24 +1,27 @@
 import React from 'react';
 import {
-  TouchableOpacity,
-  Text,
+    TouchableOpacity,
+    Text,
 } from 'react-native';
 import PropTypes from 'prop-types';
 
-export default function Controls({ styles, textStyles, label, onPressControl }) {
-  return (
-    <TouchableOpacity
-      onPress={() => onPressControl()}
-    >
-      <Text style={[styles, textStyles]}>
-        { label }
-      </Text>
-    </TouchableOpacity>
-  );
+export default function Controls({styles, textStyles, label, onPressControl}) {
+    let component;
+    if (typeof label === 'function') {
+        component = label();
+    } else {
+      component = <Text style={[styles, textStyles]}>{label}</Text>;
+    }
+
+    return (
+        <TouchableOpacity onPress={() => onPressControl()}>
+            {component}
+        </TouchableOpacity>
+    );
 }
 
 Controls.propTypes = {
-  styles: PropTypes.array.isRequired,
-  label: PropTypes.string.isRequired,
-  onPressControl: PropTypes.func.isRequired,
+    styles: PropTypes.array.isRequired,
+    label: PropTypes.string.isRequired,
+    onPressControl: PropTypes.func.isRequired,
 };
