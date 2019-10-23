@@ -51,6 +51,11 @@ export default class CalendarPicker extends Component {
     let newStyles = {};
     let doStateUpdate = false;
 
+    if (prevProps.calendarStyles !== this.props.calendarStyles) {
+      newStyles = this.updateScaledStyles(this.props);
+      doStateUpdate = true;
+    }
+
     if (
         prevProps.width !== this.props.width ||
         prevProps.height !== this.props.height
